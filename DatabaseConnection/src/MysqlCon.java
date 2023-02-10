@@ -7,15 +7,16 @@ public static void main(String args[]){
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		//com.mysql.cj.jdbc.Driver
 		Connection con=DriverManager.getConnection(  
-				"jdbc:mysql://localhost:3306/gitdata","root","Swadha");  
-		//here gitdata is database name, root is username and password  
+			//	"jdbc:mysql://localhost:3306/gitdata","root","Swadha");  
+		//here gitdata is database name, root is username and password 
+				"jdbc:mysql://sql12.freesqldatabase.com/sql12597176","sql12597176","ftV1rDuW74");
 		Statement stmt=con.createStatement();  
 
-		ResultSet rs=stmt.executeQuery("select * from pet");  
+		ResultSet rs=stmt.executeQuery("select * from employee");  
 			while(rs.next())  
 	
 
-			System.out.println(rs.getString(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
+			System.out.println(rs.getInt(1)+" "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getString(4)+" "+rs.getInt(5));
 		 
 		//System.out.println("Connection done");
 		con.close();  
