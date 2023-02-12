@@ -1,5 +1,7 @@
 import java.sql.*;
 
+import DBCon.MySqlEstablishConnection;
+import dispAwt.AwtFrameEmployee;
 import dispAwt.AwtJdbc;  
 class MysqlCon
 {  
@@ -21,11 +23,13 @@ public static void main(String args[]) throws SQLException{
 			System.out.println(rs.getInt(1)+" "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getString(4)+" "+rs.getInt(5));
 
 	*/		
-			//AwtFrameEmployee empObj=new AwtFrameEmployee();
+			//AwtFrameEmployee empObj=new AwtFrameEmployee();//this method not working for data transfer over different files
 	
 			//MySqlEstablishConnection sqlObj=new MySqlEstablishConnection();
 	
-			AwtJdbc obj= new AwtJdbc();
+			
+//working right------------
+	AwtJdbc obj= new AwtJdbc();
 		//System.out.println("Connection done");
 	/*	con.close();  
 	}
